@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-114.300 -87.800 328.700 333.600" style="enable-background:new -113.3 -86.8 326.7 331.6;" xml:space="preserve">
+<g transform="translate(0.000000,482.000000) scale(0.100000,-0.100000)">
+	<path fill="#231F20" d="M-561.7,5668.8c-69-24-119-65-158-129c-87-144-65-402,43-504c15-15,52-39,81-53c58-29,58-36-3-55c-66-21-169-78-226-127
+		c-230-195-341-502-300-830c11-87,52-234,73-260c7-9,44-13,119-13h109l2-662l3-663h415h415l3,662l2,663h115h115l15,37
+		c43,101,57,178,62,329c4,118,2,170-12,235c-60,300-247,530-505,623c-32,12-62,24-65,28c-4,3,13,15,38,26c64,28,122,85,154,150
+		c26,54,28,65,28,192s-2,138-28,191c-35,73-98,131-171,158C-313.7,5694.8-482.7,5695.8-561.7,5668.8z"/>
+	<path fill="#231F20" d="M616.3,5429.8c-75-70-236-218-358-330s-222-206-222-209s29-32,64-65c127-116,219-271,272-455c24-87,25-101,22-290
+		c-4-192-5-201-36-295c-18-54-44-110-57-125c-22-26-29-28-119-31l-96-4v-394v-394l223,2l222,3l3,416l2,416l229,8c126,4,238,4,250,0
+		c21-6,21-8,21-426v-419h340h340v735v735l207,2c179,3,208,5,211,19c2,9-89,99-240,235c-133,120-321,291-418,379
+		c-135,123-495,449-584,530c-74,67-99,85-119,85C759.3,5556.8,704.3,5513.8,616.3,5429.8z"/>
+</g>
+<script  type="text/javascript">
+    <![CDATA[
+         var c=window.location.search.split('color=')[1]; c=parseInt(c,16); if(!isNaN(c)){c=c.toString(16);var p=document.getElementsByTagName('path');for(var i=0,l=p.length;i<l;i++){var s=p[i].style;s.fill='#'+c;} var p2=document.getElementsByTagName('polygon');for(var i=0,l=p2.length;i<l;i++){var s=p2[i].style;s.fill='#'+c;} var p3=document.getElementsByTagName('circle');for(var i=0,l=p3.length;i<l;i++){var s=p3[i].style;s.fill='#'+c;} }
+        ]]>
+</script>
+</svg>

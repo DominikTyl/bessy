@@ -1,0 +1,75 @@
+/* Same containers the original sets from its script, so desktop type sizes apply. */
+.ez,
+.c {
+  container-name: c;
+  container-type: inline-size;
+}
+
+/* The template caps text far inside the window. Use the section width instead. */
+.wnd-w-wider .s-c,
+.wnd-w-wider .s-w,
+.wnd-w-wider .n-l,
+.wnd-w-wider .slogan-container,
+.wnd-w-wider .b-cs,
+.wnd-w-wider .b-text h1,
+.wnd-w-wider .b-text h2,
+.wnd-w-wider .b-text h3,
+.wnd-w-wider .b-text p,
+.wnd-w-wider .b-text li {
+  max-width: 100%;
+}
+
+#litebox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#litebox[hidden] {
+  display: none;
+}
+
+#litebox img {
+  max-width: min(94vw, 1600px);
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+#litebox button {
+  position: absolute;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+}
+
+#litebox .litebox-close {
+  top: 0.6rem;
+  right: 0.8rem;
+  font-size: 2.4rem;
+}
+
+#litebox .litebox-prev,
+#litebox .litebox-next {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  padding: 0.5rem 0.8rem;
+}
+
+#litebox .litebox-prev {
+  left: 0.4rem;
+}
+
+#litebox .litebox-next {
+  right: 0.4rem;
+}
+
+body.litebox-open {
+  overflow: hidden;
+}
