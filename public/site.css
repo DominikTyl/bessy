@@ -19,6 +19,10 @@
   max-width: 100%;
 }
 
+.s-f-l-w {
+  display: none;
+}
+
 #litebox {
   position: fixed;
   inset: 0;
