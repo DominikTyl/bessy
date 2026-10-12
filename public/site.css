@@ -5,18 +5,127 @@
   container-type: inline-size;
 }
 
-/* The template caps text far inside the window. Use the section width instead. */
-.wnd-w-wider .s-c,
-.wnd-w-wider .s-w,
-.wnd-w-wider .n-l,
-.wnd-w-wider .slogan-container,
-.wnd-w-wider .b-cs,
-.wnd-w-wider .b-text h1,
-.wnd-w-wider .b-text h2,
-.wnd-w-wider .b-text h3,
-.wnd-w-wider .b-text p,
-.wnd-w-wider .b-text li {
+.l-m .s-c,
+.l-f .s-c {
+  width: min(100%, 72rem);
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cw > .cw-c {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.25rem 1.5rem;
+}
+
+/* Clearfix pseudoprvky by jinak zabíraly buňky flexu i gridu. */
+.cw > .cw-c::before,
+.cw > .cw-c::after {
+  content: none;
+}
+
+.cw > .cw-c > .c {
+  float: none;
+  width: auto !important;
+  flex: 1 1 16rem;
+  min-width: min(100%, 16rem);
   max-width: 100%;
+}
+
+.cw > .cw-c > .c:has(.b-sp) {
+  display: none;
+}
+
+@media screen and (max-width: 64rem) {
+  .cw:has(.b-gal) > .cw-c > .c:has(.b-btn) {
+    order: -1;
+  }
+}
+
+.t .cw .b-text h1 {
+  font-size: clamp(1.05rem, 1.5vw, 1.4rem);
+  line-height: 1.35;
+}
+
+/* Nadpis o stupeň výš než body (h2 v měřítku webu). */
+.c:has(a[href="/nase-prace/"]) .b-text:first-child h1 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.25;
+}
+
+/* Proč Kooiker: další řádek začíná pod textem, ne pod číslem. */
+.c:has(a[href="/nase-prace/"]) .b-text + .b-text h1 {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 0.4em;
+  align-items: start;
+}
+
+/* Údaje o plemeni: čtyři sloupce ve stejné řadě, bez rámečků. */
+section.wnd-background-image .cw-c:has(> .c:nth-child(4)) {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem 1.75rem;
+  align-items: start;
+}
+
+section.wnd-background-image .cw-c:has(> .c:nth-child(4)) > .c {
+  min-width: 0;
+  max-width: none;
+}
+
+section.wnd-background-image .cw-c:has(> .c:nth-child(4)) .b-text h1 {
+  margin: 0.2rem 0;
+}
+
+section.wnd-background-image .cw-c:has(> .c:nth-child(4)) .b-text h1 span {
+  font-size: inherit !important;
+  letter-spacing: inherit;
+}
+
+section.wnd-background-image .cw-c:has(> .c:nth-child(4)) .b-hr-line {
+  display: none;
+}
+
+section.wnd-background-image:has(.cw-c > .c:nth-child(4)) .s-bg-l::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 72%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+/* Kontaktní pruh: výřez na hlavu psa, ne na nohy. */
+section.wnd-background-image .overlay-black-light picture img {
+  object-position: 48% 28%;
+}
+
+@media screen and (max-width: 52rem) {
+  section.wnd-background-image .cw-c:has(> .c:nth-child(4)) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 34rem) {
+  section.wnd-background-image .cw-c:has(> .c:nth-child(4)) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+h1,
+h2,
+h3,
+.b-btn-t {
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 .s-f-l-w {
